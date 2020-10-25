@@ -12,7 +12,7 @@ import in.kapilkhade.onlinebookstore.entity.Book;
 @CrossOrigin("http://localhost:4200")
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-	//@RestResource(path = "categoryid")
-	//Page<Book> findByCategoryId(@Param("id") Long id, Pageable pageable);
+	@RestResource(path = "categoryid")
+	Page<Book> findByCategoryId(@Param("id") Long id, Pageable pageable);
 
 }
